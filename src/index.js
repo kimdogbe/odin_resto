@@ -1,0 +1,1 @@
+alert("Bienvenu a le restaurant d'Odin. Le pere de Thor et spagetthi meatballs.");
