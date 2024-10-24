@@ -1,8 +1,8 @@
 import bread from "../images/bread-white.jpg"
 
-export function loadPage (parent) {
-  parent.innerHTML = "";
-
+export function loadPage () {
+  const homeContent = document.createElement("div");
+  homeContent.id = "home-content";
   const landingImg = document.createElement("img");
   const heroText = document.createElement("h1");
   const tagLine = document.createElement("p");
@@ -10,12 +10,10 @@ export function loadPage (parent) {
   heroText.innerHTML = "Resto d'Odin";
   tagLine.innerHTML = "clean, simple, brilliant";
 
-  parent.style.background = `url(${bread})`;
-  parent.style.backgroundSize = "100%";
-  parent.style.height = "100vh";
-
-  parent.appendChild(landingImg);
-  parent.appendChild(heroText);
-  parent.appendChild(tagLine);
-  console.log("Content added");
+  homeContent.appendChild(landingImg);
+  homeContent.appendChild(heroText);
+  homeContent.appendChild(tagLine);
+  
+  console.log("Content Created");
+  return homeContent;
 }

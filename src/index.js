@@ -1,24 +1,28 @@
 import { loadPage as homePage } from "./home.js";
 import { loadPage as aboutPage } from "./about.js";
 import { loadPage as menuPage } from "./menu.js";
+import "./style.css"
 
 console.log("Bienvenu a le restaurant d'Odin. Le pere de Thor et spagetthi meatballs.");
 
 const content = document.querySelector("#content");
-homePage(content);
+content.appendChild(homePage());
 
 addEventListener("click", (event) => {
   let btnClicked = event.target.id
 
   switch (btnClicked){
     case "homeBtn":
-      homePage(content);
+      content.innerHTML = "";
+      content.appendChild(homePage(content));
       break;
     case "aboutBtn":
-      aboutPage(content);
+      content.innerHTML = "";
+      content.appendChild(aboutPage());
       break;
     case "menuBtn":
-      menuPage(content);
+      content.innerHTML = "";
+      content.appendChild(menuPage());
       break;
   }
 });

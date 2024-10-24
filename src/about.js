@@ -1,22 +1,21 @@
 import bread from "../images/bread-dark.jpg"
 
-export function loadPage (parent) {
-  parent.innerHTML = "";
-  
+export function loadPage () {
+  const aboutContent = document.createElement("div");
+  aboutContent.id = "about-content";
+
   const aboutImg = document.createElement("img");
   const heroText = document.createElement("h1");
   const tagLine = document.createElement("p");
 
   heroText.innerHTML = "About Resto d'Odin";
   tagLine.innerHTML = "We make everything fresh everyday and NEVER skimp on ingredients.";
+  heroText.style.color = "white";
 
-  parent.style.background = `url(${bread})`;
-  parent.style.backgroundSize = "100%";
-  parent.style.height = "100vh";
-  parent.style.color = "white";
+  aboutContent.appendChild(aboutImg);
+  aboutContent.appendChild(heroText);
+  aboutContent.appendChild(tagLine);
 
-  parent.appendChild(aboutImg);
-  parent.appendChild(heroText);
-  parent.appendChild(tagLine);
   console.log("Content added");
+  return aboutContent;
 }

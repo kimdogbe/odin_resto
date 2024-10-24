@@ -1,8 +1,9 @@
 import bread from "../images/bread-white.jpg"
 
-export function loadPage (parent) {
-  parent.innerHTML = "";
-  
+export function loadPage () {
+  const menuContent = document.createElement("div");
+  menuContent.id = "menu-content";
+
   const heroText = document.createElement("h1");
   const menu = document.createElement("ul");
   const itemOne = document.createElement("li");
@@ -18,10 +19,8 @@ export function loadPage (parent) {
   menu.appendChild(itemTwo);
   menu.appendChild(itemThree);
 
-  parent.style.background = `url(${bread})`;
-  parent.style.backgroundSize = "100%";
-  parent.style.height = "100vh";
-  
-  parent.appendChild(heroText);
-  parent.appendChild(menu);
+  menuContent.appendChild(heroText);
+  menuContent.appendChild(menu);
+
+  return menuContent;
 }

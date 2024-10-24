@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  --butter-color: #f7d89d;
+  --bread-color: #b25431;
+  --mug-color: #b7672b;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#content > div {
+  height: 100vh;
+  padding: 10px;
+}
+
+#home-content {
+  background-image: url("../images/bread-white.jpg");
+  background-position: center;
+  background-size: 100%;
+}
+
+#about-content {
+  background-image: url("../images/bread-dark.jpg");
+  background-position: center;
+  background-size: 100%;
+  color: azure;
+}
+
+#menu-content {
+  background: url("../images/bread-types.jpg") center 100%;
+  color: azure;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: var(--butter-color);
+  border: none;
+  border-radius: 50px;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 3fr repeat(4, 1fr);
+  gap: 10px;
+  background-color: var(--mug-color);
+  padding: 20px;
+  height: fit-content;
+}
+
+#bread-logo {
+  width: 50px;
+}
+
+footer {
+  background-color: var(--butter-color);
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
